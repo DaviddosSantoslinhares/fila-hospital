@@ -1,0 +1,43 @@
+DECLARAÇÃO 
+	FILA: INTEIRO;
+	PRÓXIMO: INTEIRO;
+	ÚLTIMO: INTEIRO;
+	PRIORIDADE: INTEIRO;
+FILA<-0;
+
+PARA ÚLTIMO
+	SE ÚLTIMO = 10 ENTÃO
+        ESCREVA "A fila está cheia"
+    SENÃO
+        ÚLTIMO <- ÚLTIMO + 1
+    FIM SE
+FIM ÚLTIMO
+	
+PARA PRÓXIMO
+	SE PRÓXIMO > ÚLTIMO ENTÃO
+        ESCREVa "A fila está vazia"
+    SENÃO
+        PRÓXIMO <- PRÓXIMO + 1
+    FIM SE
+FIM PRÓXIMO
+
+PARA PRIORIDADE
+	SE ÚLTIMO - PRÓXIMO >= 10 ENTÃO
+        ESCREVA "A fila está cheia."
+    SENÃO
+        SE PRIORIDADE = 1 ENTÃO
+            PRÓXIMO <- PRIORIDADE
+            PRÓXIMO <- PRÓXIMO + 1
+        SENÃO
+            ÚLTIMO <- ÚLTIMO - 1
+            ÚLTIMO <- PRÓXIMO
+        FIM SE
+    FIM SE
+FIM PARA
+
+PARA FILA<- 0 DE ATÉ 10 PASSO 1 FAÇA
+	FILA <- FILA+1;
+	PRÓXIMO<- PRÓXIMO+1;
+	ÚLTIMO<- ÚLTIMO+1;
+	PRIORIDADE <- PRIORIDADE+1; 
+FIM PARA 
